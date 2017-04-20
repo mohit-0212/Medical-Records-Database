@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addPatient {
 
 	JFrame frame;
@@ -73,6 +81,17 @@ public class addPatient {
 		dateadmitted.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nname=name.getText();
+				String ppid=pid.getText();
+				String ccomplain=complain.getText();
+				String ddob=dob.getText();
+				String ddateadmitted=dateadmitted.getText();
+				String ddatedischarged=datedischarged.getText();
+				inserts.patient(ppid, nname, ccomplain, ddateadmitted, ddatedischarged, ddob);
+			}
+		});
 		
 		JLabel lblDateDischarged = new JLabel("Date discharged");
 		

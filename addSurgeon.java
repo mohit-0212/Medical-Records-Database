@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addSurgeon {
 
 	JFrame frame;
@@ -65,6 +73,14 @@ public class addSurgeon {
 		special.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ddid=did.getText();
+				String ssid=sid.getText();
+				String sspecial=special.getText();
+				inserts.surgeon(ddid, ssid, sspecial);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

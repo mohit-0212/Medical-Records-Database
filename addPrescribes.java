@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addPrescribes {
 
 	JFrame frame;
@@ -59,6 +67,13 @@ public class addPrescribes {
 		mid.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ddid=did.getText();
+				String mmid=mid.getText();
+				inserts.prescribes_m(ddid, mmid);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

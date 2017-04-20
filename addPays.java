@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addPays {
 
 	JFrame frame;
@@ -59,6 +67,13 @@ public class addPays {
 		bno.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ppid=pid.getText();
+				String bbno=bno.getText();
+				inserts.pays(ppid, bbno);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

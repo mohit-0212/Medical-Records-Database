@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addDepartment {
 
 	JFrame frame;
@@ -59,6 +66,13 @@ public class addDepartment {
 		deptid.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nname=name.getText();
+				String ddeptid=deptid.getText();
+				inserts.department(ddeptid, nname);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

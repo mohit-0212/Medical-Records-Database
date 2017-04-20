@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addPerformst {
 
 	JFrame frame;
@@ -59,6 +66,13 @@ public class addPerformst {
 		tid.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ssid=sid.getText();
+				String ttid=tid.getText();
+				inserts.performs_t(ssid, ttid);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

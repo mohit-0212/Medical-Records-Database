@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addDoctor {
 
 	JFrame frame;
@@ -65,6 +72,14 @@ public class addDoctor {
 		phoneno.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nname=name.getText();
+				String ddid=did.getText();
+				String pphoneno=phoneno.getText();
+				inserts.doctor(ddid, nname, pphoneno);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

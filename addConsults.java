@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addConsults {
 
 	JFrame frame;
@@ -65,6 +72,14 @@ public class addConsults {
 		date.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			String ddid=did.getText();
+			String ppid=pid.getText();
+			String ddate=date.getText();
+			inserts.consults(ddid, ppid, ddate);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

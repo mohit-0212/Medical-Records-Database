@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addOffers {
 
 	JFrame frame;
@@ -59,6 +67,13 @@ public class addOffers {
 		opid.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ddeptid=deptid.getText();
+				String oopid=opid.getText();
+				inserts.offers(ddeptid, oopid);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

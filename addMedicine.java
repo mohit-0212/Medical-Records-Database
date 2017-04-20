@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addMedicine {
 
 	JFrame frame;
@@ -71,6 +78,15 @@ public class addMedicine {
 		textField.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nname=name.getText();
+				String mmid=mid.getText();
+				String pprice=price.getText();
+				String sstock=textField.getText();
+				inserts.medicine(nname, mmid, pprice, sstock);
+			}
+		});
 		
 		button = new JButton("BACK");
 		button.addActionListener(new ActionListener() {

@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addBelongsto {
 
 	JFrame frame;
@@ -31,7 +38,7 @@ public class addBelongsto {
 			}
 		});
 	}
-
+String ddid, ddeptid;
 	/**
 	 * Create the application.
 	 */
@@ -58,6 +65,13 @@ public class addBelongsto {
 		JLabel stock = new JLabel("Department ID");
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			ddid=did.getText();
+			ddeptid=deptid.getText();
+			inserts.belongs_to(ddid, ddeptid);
+			}
+		});
 		
 		JButton back = new JButton("BACK");
 		back.addActionListener(new ActionListener() {

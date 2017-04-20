@@ -10,6 +10,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Akhil Goel
+Mohit Agarwal
+
+*/
+
 public class addBill {
 
 	JFrame frame;
@@ -38,10 +45,12 @@ public class addBill {
 	/**
 	 * Create the application.
 	 */
+	String billno, billname, billdate, billpayment;
 	public addBill() {
 		initialize();
 	}
-
+	
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -71,6 +80,15 @@ public class addBill {
 		payment.setColumns(10);
 		
 		JButton btnSubmit = new JButton("SUBMIT");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				billname=name.getText();
+				billno=bno.getText();
+				billdate=bdate.getText();
+				billpayment=payment.getText();
+				inserts.bill(billno, billname, billdate, billpayment);
+			}
+		});
 		
 		back = new JButton("BACK");
 		back.addActionListener(new ActionListener() {
